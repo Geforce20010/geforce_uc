@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GEFORCE UC</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="background-image"></div>
+  <header>
+    <h1>GEFORCE UC</h1>
+    <nav>
+      <button onclick="showSection('store')">UC Store</button>
+      <button onclick="showSection('cart')">Savatcha</button>
+      <button onclick="showSection('contact')">Telegram</button>
+    </nav>
+  </header>
+
+  <div id="store" class="section">
+    <h2>UC Narxlari</h2>
+    <div class="uc-grid" id="ucGrid"></div>
+  </div>
+
+  <div id="cart" class="section" style="display:none">
+    <h2>Savatcha</h2>
+    <div id="cartItems"></div>
+    <p id="totalPrice">Jami: 0 UZS</p>
+  </div>
+
+  <div id="contact" class="section" style="display:none">
+    <h2>Telegramga yuborish</h2>
+    <form action="/send" method="POST" enctype="multipart/form-data">
+      <input type="text" name="pubg_id" placeholder="PUBG ID" required>
+      <input type="file" name="screenshot" accept="image/*" required>
+      <button type="submit">Yuborish</button>
+    </form>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>&copy; 2025 GEFORCE UC. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
